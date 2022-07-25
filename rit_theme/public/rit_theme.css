@@ -1,0 +1,172 @@
+.mainClass {
+  box-sizing: border-box;
+  background-color: #B40404;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.masthead {
+  background-image: none !important;
+  background-color: #2d2d2d !important;
+  background: none;
+}
+
+.account-masthead {
+  background-image: none !important;
+  background-color: #000000 !important;
+  background: none;
+}
+
+form {
+  text-align: center;
+  justify: center;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #000000;
+}
+
+footer {
+  background-color: #000000;
+}
+
+@font-face {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.navLinks {
+  justify: left;
+}
+
+.nav-item {
+  list-style: none;
+  color: #d9e7eb !important;
+  margin: 5px 2px 0 4px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.nav-item a {
+  color: #d9e7eb !important;
+}
+
+.nav-item a:hover {
+  color: #d9e7eb;
+  background-color: #00232e;
+  text-decoration: none;
+}
+
+.module-content {
+  background-color: none !important;
+  border: none !important;
+  border-radius: none !important;
+  -webkit-box-shadow: none !important;
+  padding: 10px !important;
+}
+
+.SearchDiv {
+  justify: center;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  margin: 15px;
+  padding: 10px;
+  width: 90%;
+  display: block;
+}
+
+.divIntroText {
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  margin: 15px;
+  padding: 10px;
+  left: 25%;
+  display: block;
+}
+
+.col-sm img {
+  width: auto;
+  height: 60px;
+}
+
+.col-categories {
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  margin: 15px;
+  padding: 10px;
+}
+
+.col-categories:hover {
+  transform: scale(1.1);
+  box-shadow: 15px 15px #000000;
+}
+
+.divEdit {
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  margin: 15px;
+  padding: 10px;
+  left: 25%;
+}
+
+.card {
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #dfdfdf;
+  margin: 15px;
+  padding: 10px;
+}
+
+.divStatistics {
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+}
+
+.divNews {
+  width: 33%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+}
+
+.groupGrid {
+  display: flex;
+}
+
+.divInfo {
+  display: grid;
+}
