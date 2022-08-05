@@ -1,1 +1,1 @@
-# CKAN_rit_Theme
+# rit_theme
