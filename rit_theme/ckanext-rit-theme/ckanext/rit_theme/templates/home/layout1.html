@@ -18,19 +18,15 @@
   </div>
 
   <div class="groupGrid">
-    <div class="container">
+    <div class="grid-container">
       {% for entry in h.customer_groups() %}
       {% set type = entry.type %}
       {% set url = h.url_for(type ~ '.read', id=entry.display_name.lower()) %}
-        <div class="row">
-          <div class="col-sm">
-            <div class="col-categories">
-              <a href="{{ url }}" style="text-decoration: none; color: #000000;">
-                <img src="{{ entry.image_display_url or h.url_for_static('public/base/images/placeholder-group.png') }}" alt="Gruppenbild">
-                <p>{{ entry.display_name.lower() }}</p>
-              </a>
-            </div>
-          </div>
+        <div class="grid-item"
+          <a href="{{ url }}" style="text-decoration: none; color: #000000;">
+            <img src="{{ entry.image_display_url or h.url_for_static('public/base/images/placeholder-group.png') }}" alt="Gruppenbild">
+            <p>{{ entry.display_name.lower() }}</p>
+          </a>
         </div>
       {% endfor %}
     </div>
@@ -46,46 +42,45 @@
   </div>
 -->
 
-  <div class="divEdit">
-    <div class="row">
+  <div class="infoGrid">
+    <div class="editGrid">
       <div class="card-header">
         <h2>Zuletzt bearbeitet:</h2>
       </div>
-      {% for entry in h.newest_Data() %}
-      {% set type = 'dataset' %}
-      {% set url = h.url_for(type ~ '.read', id=entry.name.lower()) %}
-        <div class="col-sm-6">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">{{ entry.name }}</h5>
-              <p class="card-text">{{ entry.num_resources }} Datensätze</p>
-              <a href="{{ url }}" class="btn btn-primary">Datensatz ansehen</a>
+      <div class="grid-container">
+        {% for entry in h.newest_Data() %}
+        {% set type = 'dataset' %}
+        {% set url = h.url_for(type ~ '.read', id=entry.name.lower()) %}
+          <div class="grid-item">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ entry.name }}</h5>
+                <p class="card-text">{{ entry.num_resources }} Datensätze</p>
+                <a href="{{ url }}" class="btn btn-primary">Datensatz ansehen</a>
+              </div>
             </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="divInfo">
     <div class="divStatistics">
       <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">Daten</th>
-            <th scope="col">Gruppen</th>
-            <th scope="col">Organisationen</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{ h.get_site_statistics()['dataset_count'] }}</td>
-            <td>{{ h.get_site_statistics()['group_count'] }}</td>
-            <td>{{ h.get_site_statistics()['organization_count'] }}</td>
-          </tr>
-        </tbody>
+        <tr>
+          <th>Daten</th>
+          <td>{{ h.get_site_statistics()['dataset_count'] }}</td>
+        </tr>
+        <tr>
+          <th>Gruppen</th>
+          <td>{{ h.get_site_statistics()['group_count'] }}</td>
+        </tr>
+        <tr>
+          <th>Organisationen</th>
+          <td>{{ h.get_site_statistics()['organization_count'] }}</td>
+        </tr>
       </table>
     </div>
+  </div>
 
 <!--
     <div class="divNews">
