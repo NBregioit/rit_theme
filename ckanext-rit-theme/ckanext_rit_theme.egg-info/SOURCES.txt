@@ -8,6 +8,15 @@ ckanext/__init__.py
 ckanext/rit_theme/__init__.py
 ckanext/rit_theme/plugin.py
 ckanext/rit_theme/assets/webassets.yml
+ckanext/rit_theme/public/rit_theme.css
+ckanext/rit_theme/templates/base.html
+ckanext/rit_theme/templates/footer.html
+ckanext/rit_theme/templates/header.html
+ckanext/rit_theme/templates/admin/config.html
+ckanext/rit_theme/templates/home/index.html
+ckanext/rit_theme/templates/home/layout1.html
+ckanext/rit_theme/templates/home/snippets/about_text.html
+ckanext/rit_theme/templates/home/snippets/promoted.html
 ckanext/rit_theme/tests/__init__.py
 ckanext/rit_theme/tests/test_plugin.py
 ckanext_rit_theme.egg-info/PKG-INFO
