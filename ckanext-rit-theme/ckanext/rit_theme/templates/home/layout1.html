@@ -1,17 +1,19 @@
 <div role="main" class="mainClass">
 
+  <div class="welcomeDiv">
+  </div>
 
   <div class="SearchDiv">
     <div class="input-group rounded">
       <form class="SearchField" action="{% url_for "dataset.search" %}" method="get">
-        <h2>Was suchen Sie?</h2>
+        <h2><em>Was suchen Sie?</em></h2>
         <input type="search" value="" class="form-control rounded" placeholder="Suche" aria-label="Search" aria-describedby="search-addon" />
       </form>
     </div>
   </div>
 
   <div class="divIntroText">
-    <h2>Willkommen bei der Stadt X</h2>
+    <h2><em>Willkommen bei der Stadt X</em></h2>
     {% block promoted %}
       {% snippet "home/snippets/promoted.html" %}
     {% endblock %}
@@ -22,8 +24,8 @@
       {% for entry in h.customer_groups() %}
       {% set type = entry.type %}
       {% set url = h.url_for(type ~ '.read', id=entry.display_name.lower()) %}
-        <div class="grid-item"
-          <a href="{{ url }}" style="text-decoration: none; color: #000000;">
+        <div class="grid-item">
+          <a style="text-decoration: none; color: #000000;" href="{{ url }}">
             <img src="{{ entry.image_display_url or h.url_for_static('public/base/images/placeholder-group.png') }}" alt="Gruppenbild">
             <p>{{ entry.display_name.lower() }}</p>
           </a>
@@ -45,7 +47,7 @@
   <div class="infoGrid">
     <div class="editGrid">
       <div class="card-header">
-        <h2>Zuletzt bearbeitet:</h2>
+        <h2><em>Zuletzt bearbeitet</em></h2>
       </div>
       <div class="grid-container">
         {% for entry in h.newest_Data() %}
@@ -55,7 +57,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">{{ entry.name }}</h5>
-                <p class="card-text">{{ entry.num_resources }} Datensätze</p>
+                <p class="card-text">{{ entry.notes[0:50] }}[...]<br><br><em>{{ entry.num_resources }} Datensätze</em></p>
                 <a href="{{ url }}" class="btn btn-primary">Datensatz ansehen</a>
               </div>
             </div>
@@ -65,29 +67,27 @@
     </div>
 
     <div class="divStatistics">
-      <table class="table table-bordered">
+      <table class="table">
         <tr>
-          <th>Daten</th>
-          <td>{{ h.get_site_statistics()['dataset_count'] }}</td>
+          <th><h3><em>Daten</em></h3></th>
+          <td><h3>{{ h.get_site_statistics()['dataset_count'] }}</h3></td>
         </tr>
         <tr>
-          <th>Gruppen</th>
-          <td>{{ h.get_site_statistics()['group_count'] }}</td>
+          <th><h3><em>Gruppen</em></h3></th>
+          <td><h3>{{ h.get_site_statistics()['group_count'] }}</h3></td>
         </tr>
         <tr>
-          <th>Organisationen</th>
-          <td>{{ h.get_site_statistics()['organization_count'] }}</td>
+          <th><h3><em>Organisationen</em></h3></th>
+          <td><h3>{{ h.get_site_statistics()['organization_count'] }}</h3></td>
         </tr>
       </table>
     </div>
-  </div>
 
-<!--
     <div class="divNews">
-      <h2>Neuigkeiten:</h2>
+      <h2><em>Neuigkeiten</em></h2>
       <p>Hier könnten Neuigkeiten stehen, die sich per Adminoberfläche ändern lassen.</p>
     </div>
   </div>
--->
+
 
 </div>
