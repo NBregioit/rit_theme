@@ -226,14 +226,14 @@ h3 {
 .table > tbody > tr > th {
   border-style: none !important;
   border: none !important;
-  border-top: none !important;
+  /*border-top: none !important;*/
   text-align: center;
 }
 
 .table > tbody > tr > td {
   border-style: none !important;
   border: none !important;
-  border-top: none !important;
+  /*border-top: none !important;*/
 }
 
 .divNews {
