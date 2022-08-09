@@ -27,7 +27,7 @@
       {% set url = h.url_for(type ~ '.read', id=entry.display_name.lower()) %}
         <div class="grid-item">
           <a style="text-decoration: none; color: #000000;" href="{{ url }}">
-            <img src="{{ entry.image_display_url or h.url_for_static('public/base/images/placeholder-group.png') }}" alt="Gruppenbild">
+            <img src="{{ entry.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="Gruppenbild">
             <p>{{ entry.display_name.lower() }}</p>
           </a>
         </div>
