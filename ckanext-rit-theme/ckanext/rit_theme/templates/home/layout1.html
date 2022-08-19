@@ -7,7 +7,7 @@
     <div class="input-group rounded">
       <form class="SearchField" action="{% url_for "dataset.search" %}" method="get">
         <h2><em>Was suchen Sie?</em></h2>
-        <input type="search" value="" class="form-control rounded" placeholder="Suche" aria-label="Search" aria-describedby="search-addon" />
+        <input type="search" value="" class="form-control rounded" placeholder="Datensatz-Suche" aria-label="Search" aria-describedby="search-addon" />
       </form>
     </div>
   </div>
@@ -28,7 +28,7 @@
         <div class="grid-item">
           <a style="text-decoration: none; color: #000000;" href="{{ url }}">
             <img src="{{ entry.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="Gruppenbild">
-            <p>{{ entry.display_name.lower() }}</p>
+            <p><strong>{{ entry.display_name }}</strong></p>
           </a>
         </div>
       {% endfor %}

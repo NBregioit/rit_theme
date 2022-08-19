@@ -6,7 +6,7 @@ def customerGroups():
     return groups
 
 def newDatasets():
-    packagelist = toolkit.get_action('current_package_list_with_resources')({},{'limit': 4})
+    packagelist = toolkit.get_action('current_package_list_with_resources')({},{'limit': 6})
     return packagelist
 
 class RitThemePlugin(plugins.SingletonPlugin):
