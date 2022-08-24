@@ -41,11 +41,6 @@ a:hover {
   color: #000000;
 }
 
-form {
-  text-align: center;
-  justify: center;
-}
-
 footer {
   background-color: #000000;
 }
@@ -55,8 +50,9 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
+.SearchDiv h2 {
   margin-top: 10px;
+  text-align: center;
 }
 
 h3 {
