@@ -60,6 +60,9 @@
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
           <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          {% block footer_lang %}
+            {% snippet "snippets/language_selector.html" %}
+          {% endblock %}
         </div>
         <!-- Grid column -->
       </div>

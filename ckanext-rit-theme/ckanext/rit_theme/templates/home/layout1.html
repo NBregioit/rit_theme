@@ -1,6 +1,12 @@
 <div role="main" class="mainClass">
 
   <div class="welcomeDiv">
+    <!--
+    <div class="divMaintain">
+      <h3>Hinweis:</h3>
+      <p>Am XX.XX.XXXX finden zwischen XX:XX und XX:XX Wartungsarbeiten statt.</p>
+    </div>
+    -->
   </div>
 
   <div class="SearchDiv">
@@ -34,16 +40,6 @@
       {% endfor %}
     </div>
   </div>
-
-<!--
-  <div class="newestDataTest">
-    {% for entry in h.newest_Data() %}
-      <p>{{ entry.resources }}</p>
-      <h2>{{ entry.resources[0]['name'] }}</h2>
-      <h2>{{ entry.resources[0]['description'] }}</h2>
-    {% endfor %}
-  </div>
--->
 
   <div class="infoGrid">
     <h1 style="color:white"><em>Informationen</em></h1>

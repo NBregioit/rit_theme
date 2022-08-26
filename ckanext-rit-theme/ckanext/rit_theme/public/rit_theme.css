@@ -41,6 +41,11 @@ a:hover {
   color: #000000;
 }
 
+form {
+  text-align: center;
+  justify: center;
+}
+
 footer {
   background-color: #000000;
 }
@@ -50,9 +55,8 @@ h1 {
   font-weight: bold;
 }
 
-.SearchDiv h2 {
+h2 {
   margin-top: 10px;
-  text-align: center;
 }
 
 h3 {
@@ -121,6 +125,18 @@ h3 {
   width: auto;
   height: 300px;
   padding: 15px;
+}
+
+.welcomeDiv .divMaintain {
+  width: 30%;
+  height: auto;
+  border: 2px dashed #d42c2c;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #dbe549;
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
 }
 
 .box {
@@ -218,6 +234,7 @@ h3 {
   left: 25%;
 }
 
+/*
 .editGrid .grid-container {
   height: auto;
   box-sizing: border-box;
@@ -228,6 +245,7 @@ h3 {
   grid-gap: 10px;
   grid-auto-rows: minmax(auto, auto);
 }
+*/
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
@@ -336,6 +354,10 @@ h3 {
 }
 
 @media screen and (max-width: 530px) {
+  .navLinks ul {
+    display: flex !important;
+    width: auto;
+  }
 
   .welcomeDiv {
     height: auto;
