@@ -47,6 +47,8 @@
 
   <div class="infoGrid">
     <h1 style="color:white"><em>Informationen</em></h1>
+
+    <!--
     <div class="editGrid">
       <div class="card-header">
         <h2><em>Zuletzt bearbeitet</em></h2>
@@ -67,6 +69,29 @@
         {% endfor %}
       </div>
     </div>
+    -->
+
+    <div class="editGrid">
+      <div class="card-header">
+        <h2><em>Zuletzt bearbeitet</em></h2>
+      </div>
+      <div class="flip-card">
+        {% for entry in h.newest_Data() %}
+        {% set type = 'dataset' %}
+        {% set url = h.url_for(type ~ '.read', id=entry.name.lower()) %}
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h5 class="card-title">{{ entry.name }}</h5>
+              <p class="card-text">{{ entry.notes[0:50] }}[...]<br><br><em>{{ entry.num_resources }} Datensätze</em></p>
+            </div>
+            <div class="flip-card-back">
+              <a href="{{ url }}" class="btn btn-primary">Datensatz ansehen</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
 
     <div class="divStatistics">
       <table class="table">
@@ -89,6 +114,7 @@
       <h2><em>Neuigkeiten</em></h2>
       <p>Hier könnten Neuigkeiten stehen, die sich per Adminoberfläche ändern lassen.</p>
     </div>
+
   </div>
 
 

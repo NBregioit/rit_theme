@@ -219,6 +219,7 @@ h3 {
 }
 
 .editGrid .grid-container {
+  height: auto;
   box-sizing: border-box;
   border-radius: 15px 15px 15px 15px;
   background: #ffffff;
@@ -226,6 +227,70 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(auto, auto);
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 0px 15px 0px 15px;
+  width: auto;
+  height: auto;
+  grid-auto-rows: minmax(auto, auto);
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: inherit;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #dfdfdf;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card .flip-card-inner:hover {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #dfdfdf;
+}
+
+/* Style the back side */
+.flip-card-back {
+  position: absolute;
+  top: 40%;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  transform: rotateY(180deg);
 }
 
 .divStatistics {
@@ -281,6 +346,14 @@ h3 {
   }
 
   .editGrid .grid-container{
+    display: block;
+  }
+
+  .editGrid .flip-card {
+    display: block;
+  }
+
+  .editGrid .flip-card .flip-card-inner {
     display: block;
   }
 
