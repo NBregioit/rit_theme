@@ -56,6 +56,7 @@ h1 {
 }
 
 h2 {
+  color: #000000 !important;
   margin-top: 10px;
 }
 
@@ -248,7 +249,7 @@ h3 {
 */
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
+.editGrid .flip-card {
   box-sizing: border-box;
   border-radius: 15px 15px 15px 15px;
   background: #ffffff;
@@ -263,7 +264,7 @@ h3 {
 }
 
 /* This container is needed to position the front and back side */
-.flip-card-inner {
+.editGrid .flip-card-inner {
   position: relative;
   width: inherit;
   height: 200px;
@@ -279,12 +280,12 @@ h3 {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card .flip-card-inner:hover {
+.editGrid .flip-card .flip-card-inner:hover {
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.editGrid .flip-card-front, .editGrid .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -293,7 +294,7 @@ h3 {
 }
 
 /* Style the front side (fallback if image is missing) */
-.flip-card-front {
+.editGrid .flip-card-front {
   margin-top: 30px;
   width: 100%;
   height: auto;
@@ -303,7 +304,7 @@ h3 {
 }
 
 /* Style the back side */
-.flip-card-back {
+.editGrid .flip-card-back {
   position: absolute;
   top: 40%;
   box-sizing: border-box;
@@ -313,28 +314,172 @@ h3 {
 
 .divStatistics {
   grid-area: 3 / 1 / 4 / 2;
+  text-align: center;
   width: auto;
   height: auto;
-  text-align: center;
   box-sizing: border-box;
   border-radius: 15px 15px 15px 15px;
   background: #ffffff;
   margin: 15px;
   padding: 10px;
-  display: flex;
+  padding-top: 20px;
+  display: block;
 }
 
-.table > tbody > tr > th {
-  border-style: none !important;
-  border: none !important;
-  /*border-top: none !important;*/
+/* Option 3
+.divStatistics .flip-card {
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0px 15px 0px 15px;
+  width: auto;
+  height: auto;
+  grid-auto-rows: minmax(auto, auto);
+  perspective: 1000px;
+}
+
+.divStatistics .flip-card-inner {
+  position: relative;
+  width: inherit;
+  height: 200px;
   text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background: #dfdfdf;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
 
-.table > tbody > tr > td {
-  border-style: none !important;
-  border: none !important;
-  /*border-top: none !important;*/
+.divStatistics .flip-card-front, .divStatistics .flip-card-back {
+  width: auto;
+  height: auto;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.divStatistics .flip-card-front {
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #dfdfdf;
+}
+
+.divStatistics .flip-card-back {
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #dfdfdf;
+  transform: rotateY(180deg);
+}
+
+.divStatistics .flip-card-inner {
+    animation: rotate 10s infinite;
+}
+
+@keyframes rotate {
+    40% {
+        transform: rotateY(180deg);
+    }
+    80% {
+        transform: rotateY(180deg);
+    }
+}
+
+.divStatCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.divStatCards .flip-card-inner {
+  box-sizing: border-box;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #dfdfdf;
+  width: 100px;
+  height: auto;
+}
+
+.divStatCards a {
+  color: #000000;
+}
+
+.divDatacount {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+}
+
+.divGroupcount {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
+}
+
+.divOrganizationcount {
+  grid-area: 1 / 3 / 2 / 4;
+  width: 100%;
+}
+
+.divStatCards .flip-card {
+  width: 100%;
+}
+*/
+
+/* Option 2 */
+.divStatistics a {
+  color: #000000;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.divStatistics a::before,
+.divStatistics a::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.divStatistics a::before {
+  background-color: #000000;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.divStatistics a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #000000;
+}
+
+.divStatistics a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.divStatistics a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.divStatistics a span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.divStatistics a:hover span {
+  transform: translate3d(-200%, 0, 0);
 }
 
 .divNews {
@@ -354,9 +499,17 @@ h3 {
 }
 
 @media screen and (max-width: 530px) {
+  .navbar-nav {
+    margin-left: -1.5%;
+  }
+
   .navLinks ul {
     display: flex !important;
     width: auto;
+  }
+
+  .nav-item {
+    max-width: 33%;
   }
 
   .welcomeDiv {
@@ -395,7 +548,15 @@ h3 {
     display: block;
   }
 
-  .divStatistics{
+  .divStatistics {
     width: auto;
+  }
+
+  .divStatCards {
+    display: block;
+  }
+
+  .select2-container .select2-choice {
+    max-width: 80%;
   }
 }
