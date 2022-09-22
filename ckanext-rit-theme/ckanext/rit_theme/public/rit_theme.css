@@ -560,3 +560,81 @@ h3 {
     max-width: 80%;
   }
 }
+
+.text-left{
+  text-align: left;
+}
+.site-footer {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #000000;
+  color: #ffffff
+}
+
+.site-footer h2{
+  color: #FFFFFF;
+}
+
+.site-footer .footer-groups a {
+  color: #FFFFFF;
+  font-weight: 300
+}
+
+.site-footer .footer-groups small {
+  color: #FFFFFF;
+  font-weight: 300
+}
+
+.site-footer .footer-groups .footer-link {
+  padding-top: 5px;
+  padding-bottom: 10px
+}
+
+.site-footer .footer-groups .footer-link .footer-site-icon {
+  height: 20px;
+  padding-right: 15px
+}
+
+.site-footer .footer-groups .attribution-group img {
+  margin-bottom: 15px
+}
+
+.site-footer .footer-groups .attribution-group div {
+  padding-bottom: 5px
+}
+
+.site-footer a {
+  color: #FFFFFF
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #FF7733
+}
+
+.site-footer .footer-links {
+  margin-bottom: 20px;
+  line-height: 2
+}
+
+.site-account {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #000000;
+  color: #FFFFFF
+}
+
+.site-account a {
+  color: #FFFFFF
+}
+
+.site-account a:hover,
+.site-account a:focus {
+  color: #FF7733
+}
+
+.site-account a {
+  display: inline-block;
+  margin-left: 12px;
+  color: #95989A
+}

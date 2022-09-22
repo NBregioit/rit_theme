@@ -13,7 +13,7 @@
     <div class="input-group rounded">
       <form class="SearchField" action="{% url_for "dataset.search" %}" method="get">
         <h2><em>Was suchen Sie?</em></h2>
-        <input type="search" value="" class="form-control rounded" placeholder="Datensatz-Suche" aria-label="Search" aria-describedby="search-addon" />
+        <input type="search" name="q" value="" class="form-control rounded" placeholder="Datensatz-Suche" aria-label="Search" aria-describedby="search-addon" />
       </form>
     </div>
   </div>
@@ -175,7 +175,7 @@
 
     <div class="divNews">
       <h2><em>Neuigkeiten</em></h2>
-      <p>Hier könnten Neuigkeiten stehen, die sich per Adminoberfläche ändern lassen.</p>
+      {{ h.render_markdown(g.site_about) }}
     </div>
 
   </div>
