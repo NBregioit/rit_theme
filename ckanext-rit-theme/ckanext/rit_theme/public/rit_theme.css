@@ -34,6 +34,11 @@ body {
 
 .mainClass {
   font-family: sans-serif;
+  background-color: white !important;
+}
+
+.main {
+  background: white !important;
 }
 
 a {
@@ -638,6 +643,27 @@ h3 {
   .form-group {
   text-align: center;
   }
+}
+
+.nav-link, .page-header .nav-tabs li a {
+    color: #B40404 !important;
+}
+
+.resource-item:hover {
+    background-color: #b4040482 !important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #B40404 !important;
+    border-color: #333333 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.btn-success:hover {
+    color: #b40404 !important;
+    background-color: #333333 !important;
+    border-color: #B40404 !important;
 }
 
 .text-left{
