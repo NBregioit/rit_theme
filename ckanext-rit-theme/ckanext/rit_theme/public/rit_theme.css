@@ -61,7 +61,7 @@ form {
 }
 
 header .container {
-  width: auto !important;
+  width: 100% !important;
 }
 
 .account-masthead .account ul li {
