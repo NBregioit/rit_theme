@@ -2,6 +2,10 @@
   font-family: sans-serif;
 }
 
+html {
+  font-size: unset !important;
+}
+
 body {
   background: #B40404 !important;
 }
@@ -42,14 +46,49 @@ a:hover {
   color: #000000;
 }
 
+.module-narrow .nav-item > a, .module-narrow .nav-aside li a {
+  color: #000000 !important;
+}
+
 form {
   text-align: center;
   justify: center;
 }
 
+header .container {
+  width: auto !important;
+}
+
+.account-masthead .account ul li {
+  background-color: #333333 !important;
+}
+
+@media (min-width: 1300px)
+.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: inherit;
+}
+
 footer {
   background-color: #333333 !important;
-  text-align: center !important
+  text-align: center !important;
+}
+
+footer .p-4 {
+  color: #B40404 !important;
+  background-color: #333333 !important;
+}
+
+footer section {
+  color: #B40404 !important;
+  background-color: #333333 !important;
+}
+
+.form-group select, .form-group .select2-container {
+  width: 200px !important;
+}
+
+.form-group {
+  text-align: left;
 }
 
 h1 {
@@ -101,6 +140,7 @@ h3 {
   font-weight: bold;
   padding-left: 30px;
   padding-right: 30px;
+  background-color: #333333 !important;
 }
 
 .nav-item a {
@@ -112,6 +152,26 @@ h3 {
   color: #d9e7eb;
   background-color: #00232e;
   text-decoration: none;
+}
+
+.masthead .main-navbar ul li:hover a {
+    border-radius: 0.3rem;
+    background-color: #b40404 !important;
+}
+
+.masthead .main-navbar ul li:focus a {
+    border-radius: 0.3rem;
+    background-color: #b40404 !important;
+}
+
+.masthead .main-navbar ul li.active a {
+    border-radius: 0.3rem;
+    background-color: #b40404 !important;
+}
+
+.module-narrow .nav-item > a, .module-narrow .nav-aside li a {
+  background-color: white;
+  color: black !important;
 }
 
 .module-content {
@@ -151,10 +211,14 @@ h3 {
 .SearchDiv {
   box-sizing: border-box;
   border-radius: 15px 15px 15px 15px;
-  background: #ffffff;
+  background: #333333;
   padding: 15px;
   margin: 15px;
   display: flex;
+}
+
+.SearchDiv h2 {
+  color: white;
 }
 
 .input-group {
