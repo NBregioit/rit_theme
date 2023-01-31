@@ -536,7 +536,7 @@ h3 {
   transform-origin: 100% 50%;
   transform: translate3d(200%, 0, 0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  color: #000000;
+  color: #B40404;
 }
 
 .divStatistics a:hover::before {
@@ -554,6 +554,7 @@ h3 {
 
 .divStatistics a:hover span {
   transform: translate3d(-200%, 0, 0);
+  color: #B40404;
 }
 
 .divNews {
@@ -632,6 +633,10 @@ h3 {
 
   .select2-container .select2-choice {
     max-width: 80%;
+  }
+  
+  .form-group {
+  text-align: center;
   }
 }
 
