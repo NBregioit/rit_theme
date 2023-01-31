@@ -25,6 +25,7 @@ body {
 
 .masthead hgroup h1 {
   margin: 10px !important;
+  color: #ffffff !important
 }
 
 .mainClass {
@@ -47,7 +48,8 @@ form {
 }
 
 footer {
-  background-color: #000000;
+  background-color: #000000 !important;
+  text-align: center !important
 }
 
 h1 {
@@ -83,6 +85,7 @@ h3 {
 .navbar-nav {
   margin: 0 !important;
   padding: 0 !important;
+  display: block !important;
 }
 
 .navLinks {
@@ -102,6 +105,7 @@ h3 {
 
 .nav-item a {
   color: #d9e7eb !important;
+  padding: unset !important;
 }
 
 .nav-item a:hover {
@@ -155,7 +159,13 @@ h3 {
 
 .input-group {
   width: 100%;
+  height: 45px;
   padding: 10px;
+  display: table !important
+}
+
+.input-group-btn:last-child > .btn {
+    height: 46px;
 }
 
 .divIntroText {
@@ -637,4 +647,8 @@ h3 {
   display: inline-block;
   margin-left: 12px;
   color: #95989A
+}
+
+@media (min-width:1300px) {
+  max-width: inherit !important;
 }
