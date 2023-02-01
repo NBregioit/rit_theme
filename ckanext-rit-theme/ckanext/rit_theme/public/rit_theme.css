@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: #B40404 !important;
+  background: #ffffff !important;
 }
 
 .module-heading {
@@ -84,7 +84,7 @@ footer {
 
 footer .p-4 {
   color: #B40404 !important;
-  background-color: #333333 !important;
+  background-color: #000000 !important;
 }
 
 footer section {
