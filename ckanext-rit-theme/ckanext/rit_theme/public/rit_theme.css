@@ -35,10 +35,10 @@ body {
 .mainClass {
   font-family: sans-serif;
   background-color: white !important;
-}
-
-.main {
-  background: white !important;
+/*  max-width: 1176px !important;
+  align-content: center !important;
+  margin-left: auto;
+  margin-right: auto;*/
 }
 
 a {
