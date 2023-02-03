@@ -46,12 +46,12 @@ form {
   justify: center;
 }
 
-.form-group select, .form-group .select2-container {
-  width: 200px !important;
-}
-
 .form-group {
   text-align: left;
+}
+
+.form-group select, .form-group .select2-container {
+  width: 200px !important;
 }
 
 h1 {
