@@ -201,6 +201,10 @@ h3 {
   padding: 15px;
 }
 
+.welcomeDiv h1 {
+  color: white !important;
+}
+
 .welcomeDiv .divMaintain {
   width: 30%;
   height: auto;
@@ -226,8 +230,8 @@ h3 {
   display: flex;
 }
 
-.SearchDiv h2 {
-  color: white;
+.SearchDiv h1 {
+  color: white !important;
 }
 
 .input-group {
