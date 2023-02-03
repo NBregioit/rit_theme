@@ -21,14 +21,10 @@ body {
 .mainClass {
   font-family: sans-serif;
   background-color: white !important;
-  
-  /*set for thinner layout
-
   max-width: 1176px !important;
   align-content: center !important;
   margin-left: auto;
   margin-right: auto;
-  */
 }
 
 a {
