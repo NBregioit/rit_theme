@@ -10,26 +10,12 @@ body {
   background: #ffffff !important;
 }
 
-.module-heading {
-  background: #2d2d2d !important;
-  color: #ffffff;
-}
-
-.btn-primary {
-  background-color: #2d2d2d !important;
-}
-
 .ODPIntro {
   display: flex;
 }
 
 .ODPLogo {
   padding: 10px;
-}
-
-.masthead hgroup h1 {
-  margin: 10px !important;
-  color: #ffffff !important
 }
 
 .mainClass {
@@ -55,41 +41,13 @@ a:hover {
   color: #000000;
 }
 
-.module-narrow .nav-item > a, .module-narrow .nav-aside li a {
-  color: #000000 !important;
+header .container {
+  width: 100% !important;
 }
 
 form {
   text-align: center;
   justify: center;
-}
-
-header .container {
-  width: 100% !important;
-}
-
-.account-masthead .account ul li {
-  background-color: #333333 !important;
-}
-
-@media (min-width: 1300px)
-.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: inherit;
-}
-
-footer {
-  background-color: #333333 !important;
-  text-align: center !important;
-}
-
-footer .p-4 {
-  color: #B40404 !important;
-  background-color: #000000 !important;
-}
-
-footer section {
-  color: #B40404 !important;
-  background-color: #333333 !important;
 }
 
 .form-group select, .form-group .select2-container {
@@ -113,18 +71,6 @@ h3 {
   font-size: auto;
 }
 
-.masthead {
-  background-image: none !important;
-  background-color: #2d2d2d !important;
-  background: none;
-}
-
-.account-masthead {
-  background-image: none !important;
-  background-color: #000000 !important;
-  background: none;
-}
-
 .container {
   width: auto !important;
 }
@@ -137,6 +83,10 @@ h3 {
 
 .navLinks {
   margin-left: -1.5%;
+}
+
+.nav-link, .page-header .nav-tabs li a {
+    color: #B40404 !important;
 }
 
 .nav-item {
@@ -162,6 +112,17 @@ h3 {
   text-decoration: none;
 }
 
+.masthead {
+  background-image: none !important;
+  background-color: #2d2d2d !important;
+  background: none;
+}
+
+.masthead hgroup h1 {
+  margin: 10px !important;
+  color: #ffffff !important
+}
+
 .masthead .main-navbar ul li:hover a {
     border-radius: 0.3rem;
     background-color: #b40404 !important;
@@ -177,9 +138,24 @@ h3 {
     background-color: #b40404 !important;
 }
 
+.account-masthead {
+  background-image: none !important;
+  background-color: #000000 !important;
+  background: none;
+}
+
+.account-masthead .account ul li {
+  background-color: #333333 !important;
+}
+
 .module-narrow .nav-item > a, .module-narrow .nav-aside li a {
   background-color: white;
-  color: black !important;
+  color: #000000 !important;
+}
+
+.module-heading {
+  background: #2d2d2d !important;
+  color: #ffffff;
 }
 
 .module-content {
@@ -198,10 +174,6 @@ h3 {
   width: auto;
   height: 300px;
   padding: 15px;
-}
-
-.divIntroText h1 {
-  color: white !important;
 }
 
 .welcomeDiv .divMaintain {
@@ -244,6 +216,10 @@ h3 {
     height: 46px;
 }
 
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
+    width: inherit !important;
+}
+
 .divIntroText {
   text-align: center;
   box-sizing: border-box;
@@ -253,6 +229,10 @@ h3 {
   padding: 10px;
   left: 25%;
   display: block;
+}
+
+.divIntroText h1 {
+  color: white !important;
 }
 
 .grid-item {
@@ -265,17 +245,17 @@ h3 {
   padding: 10px;
 }
 
+.grid-item img {
+  width: auto;
+  height: 70px;
+  padding: 10px;
+}
+
 .groupGrid {
   box-sizing: border-box;
   border-radius: 15px 15px 15px 15px;
   background: #2d2d2d;
   margin: 15px;
-  padding: 10px;
-}
-
-.grid-item img {
-  width: auto;
-  height: 70px;
   padding: 10px;
 }
 
@@ -585,79 +565,12 @@ h3 {
   width: 33.33333% !important;
 }
 
-@media screen and (max-width: 530px) {
-  .navbar-nav {
-    margin-left: -1.5%;
-  }
-
-  .navLinks ul {
-    display: flex !important;
-    width: auto;
-  }
-
-  .nav-item {
-    max-width: 33%;
-  }
-
-  .welcomeDiv {
-    height: auto;
-  }
-
-  .editGrid {
-    display: block;
-  }
-
-  .editGrid .grid-container{
-    display: block;
-  }
-
-  .editGrid .flip-card {
-    display: block;
-  }
-
-  .editGrid .flip-card .flip-card-inner {
-    display: block;
-  }
-
-  .groupGrid {
-    display: block;
-  }
-
-  .groupGrid .grid-container {
-    display: block;
-  }
-
-  .infoGrid {
-    display: block;
-  }
-
-  .ODPIntro {
-    display: block;
-  }
-
-  .divStatistics {
-    width: auto;
-  }
-
-  .divStatCards {
-    display: block;
-  }
-
-  .select2-container .select2-choice {
-    max-width: 80%;
-  }
-  
-  .form-group {
-  text-align: center;
-  }
-}
-
-.nav-link, .page-header .nav-tabs li a {
-    color: #B40404 !important;
-}
-
 .resource-item:hover {
     background-color: #b4040482 !important;
+}
+
+.btn-primary {
+  background-color: #2d2d2d !important;
 }
 
 .btn-success {
@@ -676,6 +589,22 @@ h3 {
 .text-left{
   text-align: left;
 }
+
+footer {
+  background-color: #333333 !important;
+  text-align: center !important;
+}
+
+footer .p-4 {
+  color: #B40404 !important;
+  background-color: #000000 !important;
+}
+
+footer section {
+  color: #B40404 !important;
+  background-color: #333333 !important;
+}
+
 .site-footer {
   padding-top: 20px;
   padding-bottom: 40px;
@@ -753,4 +682,76 @@ h3 {
 
 @media (min-width:1300px) {
   max-width: inherit !important;
+}
+
+@media (min-width: 1300px)
+.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: inherit;
+}
+
+@media screen and (max-width: 530px) {
+  .navbar-nav {
+    margin-left: -1.5%;
+  }
+
+  .navLinks ul {
+    display: flex !important;
+    width: auto;
+  }
+
+  .nav-item {
+    max-width: 33%;
+  }
+
+  .welcomeDiv {
+    height: auto;
+  }
+
+  .editGrid {
+    display: block;
+  }
+
+  .editGrid .grid-container{
+    display: block;
+  }
+
+  .editGrid .flip-card {
+    display: block;
+  }
+
+  .editGrid .flip-card .flip-card-inner {
+    display: block;
+  }
+
+  .groupGrid {
+    display: block;
+  }
+
+  .groupGrid .grid-container {
+    display: block;
+  }
+
+  .infoGrid {
+    display: block;
+  }
+
+  .ODPIntro {
+    display: block;
+  }
+
+  .divStatistics {
+    width: auto;
+  }
+
+  .divStatCards {
+    display: block;
+  }
+
+  .select2-container .select2-choice {
+    max-width: 80%;
+  }
+  
+  .form-group {
+  text-align: center;
+  }
 }
