@@ -80,6 +80,9 @@ header .container {
 footer {
   background-color: #333333 !important;
   text-align: center !important;
+  position: absolute;
+  bottom: 0;
+  width: -webkit-fill-available;
 }
 
 footer .p-4 {
