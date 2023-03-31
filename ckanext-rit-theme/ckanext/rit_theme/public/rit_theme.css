@@ -54,6 +54,10 @@ form {
   width: 200px !important;
 }
 
+.input-group > .form-control, .input-group > .form-select {
+  min-width: 400px;
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
