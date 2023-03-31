@@ -55,7 +55,7 @@ form {
 }
 
 .input-group > .form-control, .input-group > .form-select {
-  min-width: 400px;
+  min-width: 400px !important;
 }
 
 h1 {
