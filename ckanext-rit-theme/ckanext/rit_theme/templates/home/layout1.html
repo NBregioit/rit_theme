@@ -34,7 +34,7 @@
         <div class="grid-item">
         <a style="text-decoration: none; color: #000000;" href="{{ url }}">
           <img src="{{ entry.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="Gruppenbild">
-          <p><strong>{{ entry.name }}</strong></p></a>
+          <p><strong>{{ entry.display_name }}</strong></p></a>
         </div>
       {% endfor %}
     </div>
